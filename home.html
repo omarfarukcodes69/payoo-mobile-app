@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ----------- daysi Ui cdn --------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- ------------------ font awasome cdn --------------  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ------ tailwind cdn ------- -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Home page</title>
+</head>
+
+<body class="bg-[#F4F4F7] max-h-fit">
+    <!-- ------------- header html and style --------  -->
+    <header class="home-container bg-white border-b-2 border-gray-300 max-w-lg mx-auto px-6 py-3">
+        <nav class="flex justify-between items-center">
+            <div class="detils flex gap-3">
+                <img src="./assets/Group.png" alt="" class="w-[50px] h-[50px]">
+                <div class="tittle">
+                    <h1 class="amount font-bold text-lg">$ <span>45000</span></h1>
+                    <p class="balance-status text-[#939393]">Available Balance</p>
+                </div>
+            </div>
+            <button class="log-out btn rounded-xl text-[#939393]"> <i
+                    class="fa-solid fa-right-from-bracket rotate-180 text-gray-500 font-bold"></i> Log Out</button>
+        </nav>
+    </header>
+    <!-- ----------- main section html and style ------------ -->
+    <main class="bg-white px-6 mx-auto max-w-lg rounded-b-xl">
+        <section>
+            <aside>
+                <h1 class=" text-xl font-bold pt-8">🔥 Welcome to Payooo!</h1>
+                <p class="py-4 text-[#939393]">Enjoy easy and convenient financial services with us. Cashout charge is
+                    low and </p>
+            </aside>
+            <!-- ---------------- cards -----------------  -->
+            <aside class="cards grid grid-cols-3 gap-4 py-6  ">
+                <div class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]">
+                    <img src="./assets/wallet1.png" alt="" class="w-6 h-6">
+                    <h1 class="font-semibold text-sm mt-2">Add Money</h1>
+                </div>
+
+                <div class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]">
+                    <img src="./assets/send1.png" alt="" class="w-6 h-6">
+                    <h1 class="font-semibold text-sm mt-2">Cashout</h1>
+                </div>
+
+                <div class="card border-2 border-gray-300 p-3 flex justify-center items-center text-[#939393]">
+                    <img src="./assets/money1.png" alt="" class="w-6 h-6">
+                    <h1 class="font-semibold text-sm mt-2">Transfer Money</h1>
+                </div>
+                <div class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]">
+                    <img src="./assets/bonus1.png" alt="" class="w-6 h-6">
+                    <h1 class="font-semibold text-sm mt-2">Get Bonus</h1>
+                </div>
+                <div class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]">
+                    <img src="./assets/purse1.png" alt="" class="w-6 h-6">
+                    <h1 class="font-semibold text-sm mt-2">Pay Bill</h1>
+                </div>
+                <div class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]">
+                    <img src="./assets/transaction1.png" alt="" class="w-6 h-6">
+                    <h1 class="font-semibold text-sm mt-2">Transactions</h1>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <!-- ------ status bar ------  -->
+    <section class="w-lg mx-auto mt-3 pb-[120px]">
+        <form class="">
+            <h1 class="text-xl font-bold"> Add Money</h1>
+            <div class=" bg-white rounded-xl mt-6 ">
+                <div class="data px-6 pt-6">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Select A Bank</label>
+                    <br>
+                    <input type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 relative "
+                        placeholder="Select back">
+                    <!-- -----dropdown list -----  -->
+                    <div class="dropdown  reletive -top-13 left-100">
+                        <div tabindex="0" role="button" class=" cursor-pointer m-1"><i
+                                class="fa-solid fa-angle-down text-lg text-[#939393]"></i></div>
+                        <ul tabindex="0" class="dropdown-content menu  rounded-box z-1 w-fit p-2 shadow-sm">
+                            <li><a>IBBL</a></li>
+                            <li><a>DBBL</a></li>
+                            <li><a>UCB</a></li>
+                            <li><a>EBL</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Bank Account Number</label>
+                    <br>
+                    <input type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter 11 digit account number">
+                </div>
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Amount to Add</label>
+                    <br>
+                    <input type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Add Amount to withdraw">
+                </div>
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Pin Number</label>
+                    <br>
+                    <input type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter 4 digit pin number">
+                </div>
+                <button class="btn w-[90%] m-6 py-6 rounded-3xl bg-[#0874F2] text-white text-lg">Add Money</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
