@@ -46,28 +46,28 @@
                     <h1 class="font-semibold text-sm mt-2">Add Money</h1>
                 </div>
 
-                <div id="cash-out-btn"
+                <div id="cash-out-card-btn"
                     class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]cursor-pointer">
                     <img src="./assets/send1.png" alt="" class="w-6 h-6">
                     <h1 class="font-semibold text-sm mt-2">Cashout</h1>
                 </div>
 
-                <div id="transfor-btn"
+                <div id="transfor-card-btn"
                     class="card border-2 border-gray-300 p-3 flex justify-center items-center text-[#939393]cursor-pointer">
                     <img src="./assets/money1.png" alt="" class="w-6 h-6">
                     <h1 class="font-semibold text-sm mt-2">Transfer Money</h1>
                 </div>
-                <div id="get-bonus-btn"
+                <div id="get-bonus-card-btn"
                     class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]cursor-pointer">
                     <img src="./assets/bonus1.png" alt="" class="w-6 h-6">
                     <h1 class="font-semibold text-sm mt-2">Get Bonus</h1>
                 </div>
-                <div id="pay-bill-btn"
+                <div id="pay-bill-card-btn"
                     class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]cursor-pointer">
                     <img src="./assets/purse1.png" alt="" class="w-6 h-6">
                     <h1 class="font-semibold text-sm mt-2">Pay Bill</h1>
                 </div>
-                <div id="transactions-btn"
+                <div id="transactions-card-btn"
                     class="card border-2 border-gray-300 p-6 flex justify-center items-center text-[#939393]cursor-pointer">
                     <img src="./assets/transaction1.png" alt="" class="w-6 h-6">
                     <h1 class="font-semibold text-sm mt-2">Transactions</h1>
@@ -76,9 +76,9 @@
         </section>
     </main>
     <!-- ------ Add Money Section  ------  -->
-    <section id="add-money-status" class="w-lg mx-auto mt-3 pb-[120px] hidden">
+    <section id="add-money-section" class=" section w-lg mx-auto mt-3 pb-[120px] hidden">
         <h1 class="text-xl font-bold"> Add Money</h1>
-        <form class="">
+        <form>
             <div class=" bg-white rounded-xl mt-6 ">
                 <div class="data px-6 pt-6">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Select A Bank</label>
@@ -117,9 +117,9 @@
     </section>
 
     <!-- ---------- Cash Out Section ------------  -->
-    <section id="cash-out-status" class="w-lg mx-auto mt-3 pb-[120px] hidden">
+    <section id="cash-out-section" class=" section w-lg mx-auto mt-3 pb-[120px] cursor-pointer hidden">
         <h1 class="text-xl font-bold"> Cash Out</h1>
-        <form class="">
+        <form>
             <div class=" bg-white rounded-xl mt-6 ">
                 <div class="data px-6 pt-6">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Agent Number </label>
@@ -151,6 +151,130 @@
         </form>
 
     </section>
+
+
+
+    <!-- --------- Transfer Money Section ------------  -->
+    <section id="transfer-section" class=" section w-lg mx-auto mt-3 pb-[120px] hidden ">
+        <h1 class="text-xl font-bold"> Transfer Money</h1>
+        <form>
+            <div class=" bg-white rounded-xl mt-6 ">
+                <div class="data px-6 pt-6">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">User Account Number</label>
+                    <br>
+                    <input id="agent-number" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter 11 digit user number">
+                </div>
+
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Ammount </label>
+                    <br>
+                    <input id="withdrow-amount" type="text"
+                        class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter amount to withdraw">
+                </div>
+
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Pin Number</label>
+                    <br>
+                    <input id="pin-number" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter 4 digit pin number">
+                </div>
+
+                <button id="withdrow-money-btn"
+                    class="btn w-[90%] m-6 py-6 rounded-3xl bg-[#0874F2] text-white text-lg">Sen Now</button>
+
+            </div>
+        </form>
+    </section>
+
+
+    <!-- --------- Get Bonus Section ------------  -->
+    <section id="get-bonus-section" class=" section w-lg mx-auto mt-3 pb-[120px] hidden">
+        <h1 class="text-xl font-bold"> Get Bonus</h1>
+        <form>
+            <div class=" bg-white rounded-xl mt-6 ">
+                <div class="data px-6 pt-6">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Enter Bonus Coupon</label>
+                    <br>
+                    <input id="agent-number" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter your coupon">
+                </div>
+
+                <button id="withdrow-money-btn"
+                    class="btn w-[90%] m-6 py-6 rounded-3xl bg-[#0874F2] text-white text-lg">Sen Now</button>
+
+            </div>
+        </form>
+    </section>
+
+    <!-- ------ Pay Bil Section  ------  -->
+    <section id="pay-bil-section" class=" section w-lg mx-auto mt-3 pb-[120px] hidden">
+        <h1 class="text-xl font-bold"> Pay Bil</h1>
+        <form>
+            <div class=" bg-white rounded-xl mt-6 ">
+                <div class="data px-6 pt-6">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Select To Pay</label>
+                    <select id="bank-name" class="select w-full rounded-3xl text-lg text-[#939393] mt-3">
+                        <option>Select back </option>
+                        <option>Polli</option>
+                        <option>OThe</option>
+                        <option>Titas</option>
+                    </select>
+                </div>
+
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Biller Account Number</label>
+                    <br>
+                    <input id="account-number" type="text"
+                        class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter account number">
+                </div>
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Amount to Pay</label>
+                    <br>
+                    <input id="add-amount" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Add Amount to pay">
+                </div>
+                <div class="data px-6 pt-3">
+                    <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Pin Number</label>
+                    <br>
+                    <input id="pin" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                        placeholder="Enter 4 digit pin number">
+                </div>
+                <button id="add-money-btn" class="btn w-[90%] m-6 py-6 rounded-3xl bg-[#0874F2] text-white text-lg">Pay
+                    Now</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- ------ Transactions Section  ------  -->
+    <section id="transactions-section" class=" section w-lg mx-auto mt-3 pb-[120px] hidden">
+        <div class="flex justify-between items-center mx-3">
+            <h1 class="text-lg font-bold"> Transaction History</h1>
+            <h3>View All</h3>
+        </div>
+
+        <div id="transaction-container">
+            <!-- ja dara updated -->
+        </div>
+
+    </section>
+
+
+        <!-- ------ leatest Section  ------  -->
+    <section id="leatest-section" class=" section w-lg mx-auto mt-3 pb-[120px] ">
+        <div class="flex justify-between items-center mx-3">
+            <h1 class="text-lg font-bold"> leatest History</h1>
+            <h3>View All</h3>
+        </div>
+
+        <div id="leatest-container">
+            <!-- ja dara updated -->
+        </div>
+
+    </section>
+
     <!-- -----------------js link ------------  -->
     <script src="./home.js"></script>
 </body>
