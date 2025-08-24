@@ -26,7 +26,7 @@
                     <p class="balance-status text-[#939393]">Available Balance</p>
                 </div>
             </div>
-            <button class="log-out btn rounded-xl text-[#939393]"> <i
+            <button id="log-out-btn" class="log-out btn rounded-xl text-[#939393]"> <i
                     class="fa-solid fa-right-from-bracket rotate-180 text-gray-500 font-bold"></i> Log Out</button>
         </nav>
     </header>
@@ -156,20 +156,20 @@
 
     <!-- --------- Transfer Money Section ------------  -->
     <section id="transfer-section" class=" section w-lg mx-auto mt-3 pb-[120px] hidden ">
-        <h1 class="text-xl font-bold"> Transfer Money</h1>
+        <h1 id="trasfer-tittle" class="text-xl font-bold"> Transfer Money</h1>
         <form>
             <div class=" bg-white rounded-xl mt-6 ">
                 <div class="data px-6 pt-6">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">User Account Number</label>
                     <br>
-                    <input id="agent-number" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                    <input id="user-number" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
                         placeholder="Enter 11 digit user number">
                 </div>
 
                 <div class="data px-6 pt-3">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Ammount </label>
                     <br>
-                    <input id="withdrow-amount" type="text"
+                    <input id="transfer-amount" type="text"
                         class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
                         placeholder="Enter amount to withdraw">
                 </div>
@@ -177,11 +177,11 @@
                 <div class="data px-6 pt-3">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Pin Number</label>
                     <br>
-                    <input id="pin-number" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                    <input id="transfer-pin" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
                         placeholder="Enter 4 digit pin number">
                 </div>
 
-                <button id="withdrow-money-btn"
+                <button id="sent-money-btn"
                     class="btn w-[90%] m-6 py-6 rounded-3xl bg-[#0874F2] text-white text-lg">Sen Now</button>
 
             </div>
@@ -210,7 +210,7 @@
 
     <!-- ------ Pay Bil Section  ------  -->
     <section id="pay-bil-section" class=" section w-lg mx-auto mt-3 pb-[120px] hidden">
-        <h1 class="text-xl font-bold"> Pay Bil</h1>
+        <h1 id="pay-tittle" class="text-xl font-bold"> Pay Bil</h1>
         <form>
             <div class=" bg-white rounded-xl mt-6 ">
                 <div class="data px-6 pt-6">
@@ -226,23 +226,23 @@
                 <div class="data px-6 pt-3">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Biller Account Number</label>
                     <br>
-                    <input id="account-number" type="text"
+                    <input id="biller-account-number" type="text"
                         class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
                         placeholder="Enter account number">
                 </div>
                 <div class="data px-6 pt-3">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Amount to Pay</label>
                     <br>
-                    <input id="add-amount" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                    <input id="pay-amount" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
                         placeholder="Add Amount to pay">
                 </div>
                 <div class="data px-6 pt-3">
                     <label for="" class="text-lg pt-4 font-semibold text-[#939393]">Pin Number</label>
                     <br>
-                    <input id="pin" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
+                    <input id="pay-pin" type="text" class="input my-2 bg-[#f4f4f7] w-full rounded-3xl text-lg p-7 "
                         placeholder="Enter 4 digit pin number">
                 </div>
-                <button id="add-money-btn" class="btn w-[90%] m-6 py-6 rounded-3xl bg-[#0874F2] text-white text-lg">Pay
+                <button id="pay-btn" class="btn w-[90%] m-6 py-6 rounded-3xl bg-[#0874F2] text-white text-lg">Pay
                     Now</button>
             </div>
         </form>

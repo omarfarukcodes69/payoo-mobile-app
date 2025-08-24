@@ -8,13 +8,6 @@ function getInnerText(id) {
     const Text = parseInt(document.getElementById(id).innerText);
     return Text
 }
-/**
- * // ............. set innet text ..........
-function setInnerText(id var) {
-    const setText = parseInt(document.getElementById(id).innerText) = var;
-return setText
-}
- */
 
 
 // ------ get Input value -------
@@ -39,6 +32,11 @@ function btnToggle(id, section) {
     document.getElementById(id).style.display = "block";
 
 }
+
+//------------------- log out btn even-----------
+document.getElementById("log-out-btn").addEventListener("click", function () {
+    window.location.href = "./index.html"
+})
 
 //  .................... all card  btn toggle  .................
 
@@ -83,7 +81,7 @@ document.getElementById("transactions-card-btn").addEventListener("click", funct
 document.getElementById("transactions-card-btn").addEventListener(
     "click", function () {
         const transactionsContainer = document.getElementById("transaction-container");
-        transactionsContainer.innerText =""
+        transactionsContainer.innerText = ""
         for (const data of transactionsData) {
             const div = document.createElement("div");
             div.innerHTML = `
@@ -186,6 +184,68 @@ document.getElementById("withdrow-money-btn").addEventListener("click", function
 
     const data = {
         name: "Cash Out",
+        time: new Date().toLocaleTimeString()
+    }
+    transactionsData.push(data)
+    console.log(transactionsData)
+})
+
+//----------- sent now Button --------
+document.getElementById("sent-money-btn").addEventListener("click", function (e) {
+    e.preventDefault()
+    const availableBalance = getInnerText("total-balance");
+    const userNumber = getInputIntValue("user-number");
+    const transferPin = getInputIntValue("transfer-pin");
+    const transferAmmount = getInputIntValue("transfer-amount");
+    // console.log(pinNumber,transferAmmount,userNumber)
+    if (document.getElementById("user-number").value.length !== 11) {
+        alert("Please input valid Agent Number")
+        return
+    }
+    if (transferPin !== fixedPin) {
+        alert("Please input valid Password")
+        return
+    }
+
+    let newAvailableBalance = availableBalance - transferAmmount;
+    document.getElementById("total-balance").innerText = newAvailableBalance;
+
+    const transferTittle = String(document.getElementById("trasfer-tittle").innerText)
+    console.log(transferTittle)
+
+    const data = {
+        name: transferTittle,
+        time: new Date().toLocaleTimeString()
+    }
+    transactionsData.push(data)
+    console.log(transactionsData)
+})
+
+//----------- pay-btn Button --------
+document.getElementById("pay-btn").addEventListener("click", function (e) {
+    e.preventDefault()
+    const availableBalance = getInnerText("total-balance");
+    const billerNumber = getInputIntValue("biller-account-number");
+    const payPin = getInputIntValue("pay-pin");
+    const payAmmount = getInputIntValue("pay-amount");
+    // console.log(payAmmount, payPin, billerNumber)
+    if (document.getElementById("biller-account-number").value ==='number') {
+        alert("Please input valid Agent Number")
+        return
+    }
+    if (payPin !== fixedPin) {
+        alert("Please input valid Password")
+        return
+    }
+
+    let newAvailableBalance = availableBalance - payAmmount;
+    document.getElementById("total-balance").innerText = newAvailableBalance;
+
+    const transferTittle = String(document.getElementById("pay-tittle").innerText)
+    console.log(transferTittle)
+
+    const data = {
+        name: transferTittle,
         time: new Date().toLocaleTimeString()
     }
     transactionsData.push(data)
