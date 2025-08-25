@@ -133,7 +133,7 @@ function(){
  *
  */
 
-// ....................... feature button .................
+// ................ feature button ..........
 // -----add money button ---
 document.getElementById("add-money-btn").addEventListener("click", function (e) {
     e.preventDefault()
@@ -145,6 +145,10 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
 
     if (document.getElementById("account-number").value.length !== 11) {
         alert("Please Input 11 Digits Account Number")
+        return
+    }
+    if (addAmount <= 0) {
+        alert("Please Input valid Amounr")
         return
     }
     if (inputPin !== fixedPin) {
@@ -162,6 +166,7 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
     transactionsData.push(data)
     console.log(transactionsData)
 })
+
 // ............ withdrow btn features .........
 document.getElementById("withdrow-money-btn").addEventListener("click", function (e) {
     e.preventDefault()
@@ -172,6 +177,10 @@ document.getElementById("withdrow-money-btn").addEventListener("click", function
 
     if (document.getElementById("agent-number").value.length !== 11) {
         alert("Please input valid Agent Number")
+        return
+    }
+    if (withdrowAmmount <= 0 || withdrowAmmount > availableBalance) {
+        alert("Balance Invalid")
         return
     }
     if (pinNumber !== fixedPin) {
@@ -202,6 +211,10 @@ document.getElementById("sent-money-btn").addEventListener("click", function (e)
         alert("Please input valid Agent Number")
         return
     }
+    if (transferAmmount <= 0 || transferAmmount > availableBalance) {
+        alert("Balance Invaild")
+        return
+    }
     if (transferPin !== fixedPin) {
         alert("Please input valid Password")
         return
@@ -229,8 +242,12 @@ document.getElementById("pay-btn").addEventListener("click", function (e) {
     const payPin = getInputIntValue("pay-pin");
     const payAmmount = getInputIntValue("pay-amount");
     // console.log(payAmmount, payPin, billerNumber)
-    if (document.getElementById("biller-account-number").value ==='number') {
+    if (document.getElementById("biller-account-number").value === 'number') {
         alert("Please input valid Agent Number")
+        return
+    }
+    if (payAmmount <= 0 || payAmmount > availableBalance) {
+        alert("Balance Invalid");
         return
     }
     if (payPin !== fixedPin) {
